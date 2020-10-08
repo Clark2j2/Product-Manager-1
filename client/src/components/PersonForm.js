@@ -8,7 +8,7 @@ export default props => {
     const [description, setDescription] = useState("");     
 
     const onSubmitHandler = e => {
-        e.preventDefault();
+        // e.preventDefault();
         axios.post('http://localhost:8000/api/people', {
             title,
             price,
@@ -19,6 +19,7 @@ export default props => {
     }
     return(
         <form onSubmit={onSubmitHandler}>
+            <h1>Add a new item!</h1>
             <p>
                 <label>Title</label>
                 <input type="text" onChange={e=>setTitle(e.target.value)} />
